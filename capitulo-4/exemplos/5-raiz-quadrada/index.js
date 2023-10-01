@@ -2,6 +2,8 @@ const form = document.querySelector("form")
 const h2 = document.querySelector("h2")
 
 form.addEventListener("submit", function(event) {
+  event.preventDefault()
+
   const numero = Number(form.inNumero.value)
   const raizQuadrada = Math.sqrt(numero) // calcula a raiz quadrada do número
 
@@ -10,6 +12,4 @@ form.addEventListener("submit", function(event) {
   } else { // senão
     h2.innerText = `Não há raiz exata para ${numero}`
   }
-
-  event.preventDefault()
 })

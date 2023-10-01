@@ -2,6 +2,8 @@ const form = document.querySelector("form")
 const h2 = document.querySelector("h2")
 
 form.addEventListener("submit", function(event) {
+  event.preventDefault()
+
   const nome = form.inNome.value
   const masculino = form.inMasculino.checked
   const altura = Number(form.inAltura.value)
@@ -15,7 +17,6 @@ form.addEventListener("submit", function(event) {
   }
 
   h2.innerText = `${nome}: Seu peso ideal é ${peso.toFixed(3)} kg`
-  event.preventDefault()
 })
 
 form.addEventListener("reset", function() {

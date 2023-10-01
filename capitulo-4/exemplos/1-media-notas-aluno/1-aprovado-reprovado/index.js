@@ -3,6 +3,8 @@ const h2 = document.querySelector("h2")
 const h3 = document.querySelector("h3")
 
 form.addEventListener("submit", function(event) {
+  event.preventDefault()
+
   const nome = form.inNome.value
   const nota1 = Number(form.inNota1.value)
   const nota2 = Number(form.inNota2.value)
@@ -18,6 +20,4 @@ form.addEventListener("submit", function(event) {
     h3.innerText = `Ops, ${nome}. Você foi reprovado(a)`
     h3.style.color = "red"
   }
-
-  event.preventDefault()
 })

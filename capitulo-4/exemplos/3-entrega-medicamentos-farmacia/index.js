@@ -2,6 +2,8 @@ const form = document.querySelector("form")
 const h2 = document.querySelector("h2")
 
 form.addEventListener("submit", function(event) {
+  event.preventDefault()
+  
   const bairro = form.inBairro.value
 
   let taxaEntrega // declara a variável peso
@@ -22,5 +24,4 @@ form.addEventListener("submit", function(event) {
   }
 
   h2.innerText = `Taxa R$: ${taxaEntrega.toFixed(2)}`
-  event.preventDefault()
 })

@@ -4,6 +4,8 @@ const resp2 = document.querySelector("#outResp2")
 const resp3 = document.querySelector("#outResp3")
 
 form.addEventListener("submit", function(event) {
+  event.preventDefault()
+
   const saque = Number(form.inSaque.value)
 
   if (saque % 10 != 0) { // se saque não é múltiplo de 10
@@ -31,6 +33,4 @@ form.addEventListener("submit", function(event) {
   if (notasDez > 0) {
     resp3.innerText = `Notas de R$ 10: ${notasDez}`
   }
-
-  event.preventDefault()
 })
