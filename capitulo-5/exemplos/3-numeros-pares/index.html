@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Programa Números Pares</title>
+</head>
+<body>
+  <script>
+    let num
+
+    do {
+      num = Number(prompt("Digite um número: "))
+
+      if (num == 0 || isNaN(num)) {
+          alert(`Digite um número válido`)
+      }
+    } while (num == 0 || isNaN(num)) // enquanto num=0 ou inválido
+
+    let pares = `Pares entre 1 e ${num}: `
+
+    for (let i = 2; i <= num; i = i + 2) {
+      pares = `${pares}${i}, `
+    }
+
+    alert(pares) // exibe a lista dos números pares
+  </script>
+</body>
+</html>

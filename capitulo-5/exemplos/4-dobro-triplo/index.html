@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Programa Dobro ou Triplo</title>
+</head>
+<body>
+  <script>
+    alert('Digite 0 para sair')
+
+    do {
+      const num = Number(prompt('Digite um número: '))
+
+      if (num == 0 || isNaN(num)) {
+        const sair = confirm('Deseja sair?')
+
+        if (sair) {
+          break // sai da repetição
+        } else {
+          continue // volta para o início do laço
+        }
+      }
+
+      if (num % 2 == 0) {
+        alert(`O dobro de ${num} é: ${num * 2}`) // mostra o dobro
+      } else {
+        alert(`O triplo de ${num} é: ${num * 3}`) // mostra o triplo
+      }
+    } while (true)
+
+    alert('Bye Bye...')
+  </script>
+</body>
+</html>
