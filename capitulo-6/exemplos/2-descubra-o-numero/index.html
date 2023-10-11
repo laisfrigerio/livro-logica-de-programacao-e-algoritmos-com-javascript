@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Programa Descubra o Número</title>
+</head>
+<body>
+  <h1>Jogo Descubra o Número</h1>
+  <form>
+    <p>Número:
+      <input type="number" id="inAposta" min="0" max="100" required autofocus />
+      <input id="btnApostar" type="submit" value="Apostar" />
+      <input id="btnJogarNovamente" type="button" value="Jogar novamente" disabled />
+    </p>
+  </form>
+  <h2 id="respError">Erros: <span>0</span></h2>
+  <h2 id="respChances">Chances: <span>6</span></h2>
+  <h2 id="respDica"><i>Dica: É um número entre 1 e 100</i></h2>
+  <script src="./index.js"></script>
+</body>
+</html>
